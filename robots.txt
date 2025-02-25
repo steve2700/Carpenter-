@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://steve2700.github.io/Carpenter-/sitemap.xml
