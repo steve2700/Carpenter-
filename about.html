@@ -45,15 +45,14 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Customized Bootstrap Stylesheet (Local) -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Structured Data for Local Business -->
+    <!-- Structured Data (unchanged) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -81,13 +80,7 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           "opens": "09:00",
           "closes": "21:00"
         },
@@ -108,108 +101,28 @@
         "@type": "OfferCatalog",
         "name": "Carpentry Services",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Custom Furniture Design",
-              "description": "Bespoke furniture designed and crafted to your specifications"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Kitchen Renovations",
-              "description": "Complete kitchen remodeling and custom cabinetry"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Wooden Flooring",
-              "description": "Installation and restoration of premium wooden flooring"
-            }
-          }
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Furniture Design", "description": "Bespoke furniture designed and crafted to your specifications"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kitchen Renovations", "description": "Complete kitchen remodeling and custom cabinetry"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wooden Flooring", "description": "Installation and restoration of premium wooden flooring"}}
         ]
       },
       "review": [
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Sarah Thompson"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "datePublished": "2024-08-15",
-          "reviewBody": "Woody Carpentry transformed our home with beautiful custom cabinets. Professional, punctual and exceptional craftsmanship!"
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "David Mkhize"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "datePublished": "2024-07-22",
-          "reviewBody": "Outstanding wooden flooring installation. The team was knowledgeable, efficient and delivered a perfect finish."
-        }
+        {"@type": "Review", "author": {"@type": "Person", "name": "Sarah Thompson"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "datePublished": "2024-08-15", "reviewBody": "Woody Carpentry transformed our home with beautiful custom cabinets. Professional, punctual and exceptional craftsmanship!"},
+        {"@type": "Review", "author": {"@type": "Person", "name": "David Mkhize"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "datePublished": "2024-07-22", "reviewBody": "Outstanding wooden flooring installation. The team was knowledgeable, efficient and delivered a perfect finish."}
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "127"
-      }
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "127"}
     }
     </script>
 
-    <!-- FAQ Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What areas of Johannesburg do you service?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We provide our carpentry services throughout the greater Johannesburg area, including Sandton, Randburg, Midrand, Fourways, Rosebank, and surrounding suburbs. For projects outside these areas, please contact us for availability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer free quotes for carpentry projects?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we offer free on-site consultations and quotes for all carpentry projects. Our experienced craftsmen will assess your needs, discuss options, and provide a detailed quotation with no obligation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What types of wood do you work with?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We work with a wide variety of woods including pine, oak, maple, walnut, mahogany, and various sustainable hardwoods. We can advise on the best wood types for your specific project based on durability, appearance, and budget requirements."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a typical carpentry project take?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Project timelines vary based on complexity and scope. Small repairs may be completed in a single day, while custom furniture pieces typically take 2-3 weeks, and full renovations can extend to 4-8 weeks. We provide detailed timelines during the quotation process."
-          }
-        }
+        {"@type": "Question", "name": "What areas of Johannesburg do you service?", "acceptedAnswer": {"@type": "Answer", "text": "We provide our carpentry services throughout the greater Johannesburg area, including Sandton, Randburg, Midrand, Fourways, Rosebank, and surrounding suburbs. For projects outside these areas, please contact us for availability."}},
+        {"@type": "Question", "name": "Do you offer free quotes for carpentry projects?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, we offer free on-site consultations and quotes for all carpentry projects. Our experienced craftsmen will assess your needs, discuss options, and provide a detailed quotation with no obligation."}},
+        {"@type": "Question", "name": "What types of wood do you work with?", "acceptedAnswer": {"@type": "Answer", "text": "We work with a wide variety of woods including pine, oak, maple, walnut, mahogany, and various sustainable hardwoods. We can advise on the best wood types for your specific project based on durability, appearance, and budget requirements."}},
+        {"@type": "Question", "name": "How long does a typical carpentry project take?", "acceptedAnswer": {"@type": "Answer", "text": "Project timelines vary based on complexity and scope. Small repairs may be completed in a single day, while custom furniture pieces typically take 2-3 weeks, and full renovations can extend to 4-8 weeks. We provide detailed timelines during the quotation process."}}
       ]
     }
     </script>
@@ -509,7 +422,6 @@
     <footer class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <!-- Contact Information -->
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Contact Us</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3" aria-hidden="true"></i>Johannesburg, South Africa</p>
@@ -522,7 +434,6 @@
                         <a class="btn btn-outline-light btn-social" href="https://linkedin.com/company/woodycarpentry" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <!-- Services -->
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Our Services</h4>
                     <a class="btn btn-link text-light" href="general-carpentry.html">General Carpentry</a>
@@ -538,7 +449,6 @@
                     <a class="btn btn-link text-light" href="roofing-services.html">Roofing Services</a>
                     <a class="btn btn-link text-light" href="waterproofing-solutions.html">Waterproofing Solutions</a>
                 </div>
-                <!-- Quick Links -->
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
                     <a class="btn btn-link text-light" href="about.html">About Us</a>
@@ -547,7 +457,6 @@
                     <a class="btn btn-link text-light" href="terms.html">Terms & Conditions</a>
                     <a class="btn btn-link text-light" href="privacy.html">Privacy Policy</a>
                 </div>
-                <!-- Newsletter Signup -->
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
                     <p>Subscribe to our newsletter for the latest updates and offers.</p>
@@ -568,7 +477,6 @@
                         © <a class="border-bottom" href="index.html">Woody Carpentry</a>, All Rights Reserved. <span id="currentYear">2025</span>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!-- Footer credits can be added here if needed -->
                     </div>
                 </div>
             </div>
@@ -579,9 +487,9 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- JavaScript Libraries (Local) -->
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
 
     <!-- Add current year to footer -->
     <script>
@@ -592,7 +500,6 @@
 
     <!-- Deferred JavaScript -->
     <script>
-        // Function to load scripts after page content
         function loadDeferredScripts() {
             const scriptSources = [
                 'lib/wow/wow.min.js',
@@ -600,22 +507,16 @@
                 'lib/waypoints/waypoints.min.js',
                 'lib/counterup/counterup.min.js',
                 'lib/owlcarousel/owl.carousel.min.js',
-                'lib/isotope/isotope.pkgd.min.js',
-                'lib/lightbox/js/lightbox.min.js',
                 'js/main.js'
             ];
-
             scriptSources.forEach(src => {
                 const script = document.createElement('script');
                 script.src = src;
+                script.defer = true;
                 document.body.appendChild(script);
             });
         }
-
-        // Load non-critical scripts after page load
         window.addEventListener('load', loadDeferredScripts);
-
-        // Remove spinner quickly
         window.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 document.getElementById('spinner').classList.remove('show');
@@ -624,4 +525,4 @@
     </script>
 </body>
 
-</html>
+        </html>
