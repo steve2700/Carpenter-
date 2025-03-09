@@ -17,18 +17,30 @@
     <link rel="canonical" href="https://woodycarpentry.co.za/">
 
     <!-- Preload Critical Assets -->
-    <link rel="preload" href="img/carousel-1.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="img/carousel-1-mobile.webp" as="image" fetchpriority="high">
     <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJ5h.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Inline Critical CSS (Replace with your actual critical CSS) -->
+    <!-- Inline Critical CSS (Expanded for CLS/LCP) -->
     <style>
-        /* Basic critical CSS for navbar and carousel - extract full version with a tool like Critical */
+        /* Critical styles for navbar, carousel, and fonts */
+        body { margin: 0; font-family: 'Open Sans', sans-serif; }
         .navbar { background: #fff; padding: 0; position: sticky; top: 0; z-index: 1000; }
-        .navbar-brand h2 { margin: 0; color: #007bff; }
+        .navbar-brand h2 { margin: 0; color: #007bff; font-family: 'Roboto', sans-serif; }
+        .navbar-nav { margin-left: auto; }
         .container-fluid { padding: 0; }
         .owl-carousel { position: relative; }
-        .img-fluid { max-width: 100%; height: auto; }
+        .owl-carousel-item { position: relative; min-height: 600px; }
+        .img-fluid { max-width: 100%; height: auto; display: block; }
+        .position-absolute { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .btn-primary { background: #007bff; border: none; padding: 10px 20px; color: #fff; }
+        @font-face {
+            font-family: 'Open Sans'; src: url('https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJ5h.woff2') format('woff2');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Roboto'; src: url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2') format('woff2');
+            font-display: swap;
+        }
     </style>
 
     <!-- Favicon -->
@@ -131,9 +143,9 @@
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5">
         <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
+            <div class="owl-carousel-item position-relative" style="min-height: 600px;">
                 <picture>
-                    <source media="(max-width: 768px)" srcset="img/carousel-1-mobile.webp">
+                    <source media="(max-width: 768px)" srcset="img/carousel-1-mobile.webp" width="800" height="400">
                     <img class="img-fluid" src="img/carousel-1.webp" alt="Carpentry Work in Joburg" width="1200" height="600">
                 </picture>
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
@@ -150,15 +162,13 @@
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative">
+            <div class="owl-carousel-item position-relative" style="min-height: 600px;">
                 <img class="img-fluid" src="img/carousel-2.webp" alt="Custom Woodworking in Joburg" width="1200" height="600" loading="lazy">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-lg-8 text-center">
-                                <h5 class “
-
-text-white text-uppercase mb-3 animated slideInDown">Quality Craftsmanship</h5>
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Quality Craftsmanship</h5>
                                 <h1 class="display-3 text-white animated slideInDown mb-4">Custom Woodwork Experts</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Transforming spaces in Joburg with quality carpentry.</p>
                                 <a href="/service.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Services</a>
@@ -168,7 +178,7 @@ text-white text-uppercase mb-3 animated slideInDown">Quality Craftsmanship</h5>
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative">
+            <div class="owl-carousel-item position-relative" style="min-height: 600px;">
                 <img class="img-fluid" src="img/carousel-3.webp" alt="Bespoke Furniture by Woody Carpentry" width="1200" height="600" loading="lazy">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
