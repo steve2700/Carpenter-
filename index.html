@@ -16,28 +16,47 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://woodycarpentry.co.za/">
 
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="img/carousel-1.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJ5h.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Inline Critical CSS (Replace with your actual critical CSS) -->
+    <style>
+        /* Basic critical CSS for navbar and carousel - extract full version with a tool like Critical */
+        .navbar { background: #fff; padding: 0; position: sticky; top: 0; z-index: 1000; }
+        .navbar-brand h2 { margin: 0; color: #007bff; }
+        .container-fluid { padding: 0; }
+        .owl-carousel { position: relative; }
+        .img-fluid { max-width: 100%; height: auto; }
+        .btn-primary { background: #007bff; border: none; padding: 10px 20px; color: #fff; }
+    </style>
+
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    </noscript>
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-purged.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 
 <body>
@@ -113,7 +132,10 @@
     <div class="container-fluid p-0 pb-5">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1.webp" alt="Carpentry Work in Joburg" width="1200" height="600">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="img/carousel-1-mobile.webp">
+                    <img class="img-fluid" src="img/carousel-1.webp" alt="Carpentry Work in Joburg" width="1200" height="600">
+                </picture>
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -134,7 +156,9 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Quality Craftsmanship</h5>
+                                <h5 class “
+
+text-white text-uppercase mb-3 animated slideInDown">Quality Craftsmanship</h5>
                                 <h1 class="display-3 text-white animated slideInDown mb-4">Custom Woodwork Experts</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Transforming spaces in Joburg with quality carpentry.</p>
                                 <a href="/service.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Services</a>
@@ -658,7 +682,7 @@
                         © <a class="border-bottom" href="/">Woody Carpentry</a>, All Rights Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        
+                        Designed by <a href="https://example.com" rel="nofollow">Woody Team</a>
                     </div>
                 </div>
             </div>
@@ -670,7 +694,7 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="lib/wow/wow.min.js" defer></script>
     <script src="lib/easing/easing.min.js" defer></script>
